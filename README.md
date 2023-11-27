@@ -14,22 +14,29 @@ I've enjoyed the whole process, I've tweaked the game design a bit and I still h
 
 
 
-Start game:
-
+#Start game:
 <img width="350" alt="Snímka obrazovky 2023-11-27 o 13 36 00" src="https://github.com/VeveCambor/WordGame/assets/121693001/7b78638f-e4d6-4b5a-be43-61d6dd81b6f7">
 
 
 
-You won!
-
+#You won!
 <img width="350" alt="Snímka obrazovky 2023-11-27 o 13 41 17" src="https://github.com/VeveCambor/WordGame/assets/121693001/301cc069-91d2-47ac-870d-5be0a5d9a11c">
 
 
 
-You lost!
-
+#You lost!
 <img width="350" alt="Snímka obrazovky 2023-11-27 o 13 42 11" src="https://github.com/VeveCambor/WordGame/assets/121693001/f706df4d-5ce0-4dfa-97cd-630db197cf2e">
 
 
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
 
