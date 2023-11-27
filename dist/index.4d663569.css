@@ -1,0 +1,209 @@
+html {
+  --game-spacing: 32px;
+  --header-height: 4rem;
+  --color-success: #33cc7a;
+  --color-warning: #ffc800;
+  --color-error: #c32222;
+  --color-gray-100: #1a1a1a;
+  --color-gray-300: #404040;
+  --color-gray-500: gray;
+  --color-gray-700: #bfbfbf;
+  --color-gray-900: #e6e6e6;
+  --color-white: #fcfffa;
+  --color-background: #011628;
+  overflow-y: scroll;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: sans-serif;
+}
+
+@media (height <= 600px) {
+  body {
+    --game-spacing: 8px;
+  }
+}
+
+button {
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  flex-direction: column;
+  min-height: 100%;
+  display: flex;
+}
+
+header {
+  height: var(--header-height);
+  border-bottom: 1px solid var(--color-gray-700);
+  color: var(--color-white);
+  display: flex;
+}
+
+header .side {
+  width: var(--header-height);
+  place-content: center;
+  display: grid;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: var(--header-height);
+  text-align: center;
+  flex: 1;
+}
+
+@media (width <= 25rem) {
+  h1 {
+    font-size: 1.25rem;
+  }
+}
+
+.game-wrapper {
+  gap: var(--game-spacing);
+  padding: var(--game-spacing) 32px;
+  flex-direction: column;
+  flex: 1;
+  min-width: 250px;
+  max-width: min(500px, 58vh, 100%);
+  margin: 0 auto;
+  display: flex;
+}
+
+.guess-results {
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  display: flex;
+}
+
+.guess {
+  gap: 4px;
+  margin-bottom: 4px;
+  display: flex;
+}
+
+.cell {
+  aspect-ratio: 1;
+  border: 3px solid var(--color-gray-900);
+  border-radius: 50px;
+  place-content: center;
+  width: 20%;
+  font-size: 2rem;
+  display: grid;
+  position: relative;
+}
+
+.cell.correct {
+  background: var(--color-success);
+  border-color: var(--color-success);
+  color: #fff;
+}
+
+.cell.incorrect {
+  background: var(--color-gray-300);
+  border-color: var(--color-gray-300);
+  color: #fff;
+}
+
+.cell.misplaced {
+  background: var(--color-warning);
+  border-color: var(--color-warning);
+  color: #fff;
+}
+
+.guess-input-wrapper {
+  flex-direction: column;
+  gap: 4px;
+  height: 6.75rem;
+  display: flex;
+}
+
+.guess-input-wrapper label {
+  color: var(--color-gray-900);
+  padding-left: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.guess-input-wrapper input {
+  outline-offset: 4px var(--color-warning);
+  border-radius: 50px;
+  width: 100%;
+  padding: 8px 16px;
+  font-size: 2rem;
+  display: block;
+}
+
+.banner {
+  text-align: center;
+  will-change: transform;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  padding: 50px;
+  animation: .75s cubic-bezier(0, .72, .24, 1.02) slideUp;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.happy.banner {
+  background: var(--color-success);
+  color: #fff;
+}
+
+.sad.banner {
+  background: var(--color-error);
+  color: #fff;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  border: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+[data-reach-dialog-content] {
+  border-radius: 8px;
+  padding: 24px 32px;
+  position: relative;
+}
+
+.modal-close-btn {
+  cursor: pointer;
+  padding: 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modal-title {
+  margin-bottom: .5em;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+/*# sourceMappingURL=index.4d663569.css.map */
